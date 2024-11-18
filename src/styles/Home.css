@@ -1,0 +1,247 @@
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f0f8ff; /* Light background color */
+    text-align: center;
+    min-height: 100vh;
+
+  }
+  
+  .home-content h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .home-content h2{
+    font-size: 2rem;
+    color:#555;
+    margin-bottom: 20px;
+  }
+  
+  .home-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  button {
+    
+    max-width: 50%; /* Restrict width to avoid overflow */
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #21a1f1;
+  }
+
+  
+  
+  /* Define the bounce-in animation */
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+    80% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+    /* About Me Section Styling */
+  .about-me-section {
+    max-width: 600px; /* Restrict width to control line length */
+    padding: 10px;
+    border: 2px solid #333; /* Outline around the section */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background inside the box */
+    text-align: left; /* Left-align text within the section */
+    margin: 40px 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    animation: bounceInLeft 1s ease;
+  }
+
+  .about-me-section h2 {
+    font-size: 2.5rem; /* Large heading for emphasis */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .about-me-section p {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    color: #555; /* Medium gray for contrast against heading */
+    line-height: 1.6; /* Comfortable line spacing for readability */
+    max-width: 800px; /* Restrict width for readability */
+    padding: 0 20px; /* Inner padding for smaller screens */
+  }
+
+  .about-me-section p {
+    margin-bottom: 40px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .about-me-section h2 {
+      font-size: 2rem; /* Smaller heading on tablets */
+    }
+
+    .about-me-section p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-me-section h2 {
+      font-size: 1.8rem; /* Smaller heading on mobile */
+    }
+
+    .about-me-section p {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+  }
+
+  .proj-car h2{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;    
+  }
+
+  .proj-car {
+   
+    padding: 50px;
+    background-color: #f0f8ff; /* Light background color */
+    text-align: center;
+    
+  }
+
+  .project{
+    width: 60%;
+  }
+
+  .proj-link:link{
+    font-size: 1.3rem; /* Large heading for emphasis */
+    color:#333;
+  }
+
+  .proj-link:hover{
+    color:hotpink;
+  }
+
+  .proj-link::after {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.25em;
+  
+    background-size: 100%;
+    background-image: url("../images/link-icon.png");
+  }
+
+  .recent-experience{
+    margin-top: 0;
+    padding: 5px;
+    background-color:#f0f8ff;
+  }
+
+  .recent-experience h2{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;   
+    text-align: center;
+  }
+
+  /* Footer Styling */
+.footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text color */
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Spacing between elements */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link img {
+  width: 25px;
+  height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.social-link img:hover {
+  transform: scale(1.1); 
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    gap: 15px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-socials {
+    gap: 10px;
+  }
+}
+
+
+
+
+
+ 

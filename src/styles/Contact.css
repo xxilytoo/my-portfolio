@@ -4,6 +4,7 @@
     border-radius: 8px;
     max-width: 600px;
     margin: 0 auto;
+    
   }
   
   .contact-section h2 {
@@ -33,7 +34,8 @@
   }
   
   button {
-    display: block;
+    display: inline-block;
+    margin: 0 auto;
     width: 100%;
     padding: 10px;
     background-color: #61dafb;
@@ -45,5 +47,9 @@
   
   button:hover {
     background-color: #21a1f1;
+  }
+
+  .button-container{
+    text-align:center; 
   }
   

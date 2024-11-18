@@ -1,0 +1,21 @@
+.projects-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column; /* Change layout to vertical */
+  gap: 20px; /* Space between project cards */
+}
+
+
+
+  
