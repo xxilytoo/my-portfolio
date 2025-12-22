@@ -10,7 +10,7 @@ const Project = ({ title, image, description, tech, link, link2, width }) => (
     <img
       className={styles.image}
       src={image}
-      alt={`${title} image showing project preview`}
+      alt={`${title} project preview`}
     />
     <p className={styles.description}>{description}</p>
     <p className={styles.tech}>{tech}</p>
