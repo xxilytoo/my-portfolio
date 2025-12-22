@@ -53,159 +53,282 @@ const not_proj = [
 
 const Home = () => {
   return (
-  <section id = "parent">
-    <section id="home" className="home-section">
-      <div className="home-content">
-        <h1>
+  <main className="main">
+    {/* Hero Section */}
+    <section className="hero">
+      <div className="hero__background">
+        <div className="hero__gradient"></div>
+        <div className="hero__grid"></div>
+      </div>
+      
+      <div className="hero__content">
+        <div className="hero__badge">
+          <span className="hero__badge-dot"></span>
+          <span>Open to Opportunities</span>
+        </div>
+        
+        <h1 className="hero__title">
           <Typical
             steps={[
-              'Hi, I\'m', 2000,   
-              'Hi, I\'m Shawn!', 4000,   
+              "Hi, I'm", 2000,   
+              "Hi, I'm Shawn!", 4000,   
               '', 1000   
             ]}
             loop={Infinity}
             wrapper="span"
           />
         </h1>
-        <h2>Software Engineer specializing in Infrastructure & AI</h2>
-        <p>Welcome to my portfolio.</p>
+        
+        <h2 className="hero__subtitle">
+          Software Engineer specializing in <span className="gradient-text">Infrastructure & AI</span>
+        </h2>
+        
+        <p className="hero__description">
+          CS Honors Senior @ Texas A&M • Incoming SWE Intern @ ? • Published Researcher
+        </p>
+        
+        <div className="hero__cta">
+          <a href="#ProjCar" className="hero__btn hero__btn--primary">
+            View My Work
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://drive.google.com/file/d/1W0WkSvlOiHQPns0hm-zQnyox-1IB349D/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero__btn hero__btn--secondary">
+            Download Resume
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div className="hero__socials">
+          <a href="https://github.com/xxilytoo" target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="GitHub">
+            <img src={GHlogo} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/1cken/" target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="LinkedIn">
+            <img src={LNlogo} alt="LinkedIn" />
+          </a>
+          <a href="https://x.com/xxilytoo_dev" target="_blank" rel="noopener noreferrer" className="hero__social-link" aria-label="X">
+            <img src={Xlogo} alt="X" />
+          </a>
+        </div>
       </div>
-        {/* About Me Section */}
+      
+      <div className="hero__scroll-indicator">
+        <span>Scroll</span>
+        <div className="hero__scroll-line"></div>
+      </div>
+    </section>
 
-      <section id="about-me" className="about-me-section">
-          <h2>About Me</h2>
-          <p>
-          I'm currently a junior in the CS Honors program at Texas A&M University, with a strong passion for the intersection of AI, software, and infrastructure. 
-          I’m driven by the challenge of building solutions that are not only efficient but also scalable, user-friendly, and impactful. 
-          Over the years, I’ve gained experience in languages like Python, JavaScript, Java, and C++, and I thrive on tackling projects that push me to innovate and grow in this evolving field.
-          </p>
-          
-          <p>
-          Hobbies: Cooking & Exercising
-          </p>
-      </section>
-    </section>
-    <section id="skills">
-        <Skills />
-    </section>
-    <section id="recent-exp" className="recent-experience">
-      <h2>My Experiences</h2>
-      <VerticalTimeline>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Aug 2024 - Present"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Software Development Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">Reinsurance Group of America || Remote</h4>
-          <p>
-            Backend engineering, Jenkins, Groovy, Python, Agile, Linux, CI/CD
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="May 2025 - Aug 2025"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Backend Software Engineer Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">Splunk || Boulder, CO</h4>
-          <p>
-            Distributed Systems, Concurrency & Multithreading, Fault Tolerance & Retry Logic, TCP/IP/UDP, Inter-Process Communication (IPC), Golang, C++, Integration/Functional/Unit Testing, Bash, CI/CD
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Aug 2024 - Present"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Texas A&M TACO Student Researcher</h3>
-          <h4 className="vertical-timeline-element-subtitle">College Station, TX</h4>
-          <p>
-            Research, Visual Language Models (VLMS), Benchmark Testing & Development
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Jun 2024 - Aug 2024"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
-          <h4 className="vertical-timeline-element-subtitle">Reinsurnace Group of America || St. Louis, Missouri</h4>
-          <p>
-            Fullstack Development, React.js, MUI, AWS Lambda, Terraform, MongoDB, GraphQL, Ansible, Python, Node.js
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="Aug 2023 - Sep 2024"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Ignite Fellow & Discover Participant</h3>
-          <h4 className="vertical-timeline-element-subtitle"> AI4ALL  || Remote</h4>
-          <p>
-            Artificial Intelligence, Machine Learning, Python, Tensorflow, sklearn, Matplotlib
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="Aug 2023 - May 2026"
-          iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Texas A&M University</h3>
-          <h4 className="vertical-timeline-element-subtitle">B.S. Computer Science Honors</h4>
-          <p>Relevant Courses: </p>
-          <ul>
-            <li>Data Structures (C++)</li>
-            <li>Computer Organization (C & Assembly)</li>
-            <li>Programming Languages (Java & Haskell) </li>
-          </ul>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="May 2022 - Aug 2022"
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">Lead Researcher</h3>
-          <h4 className="vertical-timeline-element-subtitle">Texas State University || Remote</h4>
-          <p>
-            Research, Cloud Computing, Machine Learning, Java, Python, Orange
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-          icon={<StarIcon />}
-        />
-      </VerticalTimeline>
-    </section>
-    <section id = "ProjCar" className="proj-car">
-      <h2>Notable Projects</h2>
-      <a className="proj-link" href="./projects">View All Projects Here</a>
-      <ProjectCarousel projects={not_proj} />
-    </section>
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-content">
-          <div className="footer-socials">
-            <a href="https://github.com/xxilytoo" className="social-link"><img src={GHlogo} alt="Github"/></a>
-            <a href="https://www.linkedin.com/in/1cken/" className="social-link"><img src={LNlogo} alt="LinkedIn"/></a>
-            <a href="https://x.com/xxilytoo_dev" className="social-link"><img src={Xlogo} alt="X"/></a>
+    {/* About Me Section */}
+    <section className="about">
+      <div className="container">
+        <div className="about__content">
+          <h2 className="section-title">
+            About <span className="gradient-text">Me</span>
+          </h2>
+          <div className="about__text">
+            <p>
+              I'm a junior in the CS Honors program at Texas A&M University, with a strong passion for the intersection of <strong>AI, software, and infrastructure</strong>. 
+              I'm driven by the challenge of building solutions that are not only efficient but also scalable, user-friendly, and impactful.
+            </p>
+            <p>
+              Over the years, I've gained experience in languages like Python, JavaScript, Java, Go, and C++, and I thrive on tackling projects that push me to innovate and grow in this evolving field.
+            </p>
+          </div>
+          <div className="about__highlights">
+            <div className="about__highlight-card">
+              <span className="about__highlight-icon">🎓</span>
+              <span className="about__highlight-text">Texas A&M CS Honors</span>
+            </div>
+            <div className="about__highlight-card">
+              <span className="about__highlight-icon">💼</span>
+              <span className="about__highlight-text">3+ Internships</span>
+            </div>
+            <div className="about__highlight-card">
+              <span className="about__highlight-icon">📄</span>
+              <span className="about__highlight-text">Published Researcher</span>
+            </div>
           </div>
         </div>
-        <div className="footer-bottom">
-          <p>Created with React JS ^_^</p>
+      </div>
+    </section>
+
+    {/* Skills Section */}
+    <section id="skills" className="skills-section">
+      <Skills />
+    </section>
+
+    {/* Experience Section */}
+    <section id="recent-exp" className="experience">
+      <div className="container">
+        <h2 className="section-title">
+          My <span className="gradient-text">Experience</span>
+        </h2>
+        <VerticalTimeline lineColor="var(--timeline-line)">
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Aug 2024 - Present"
+            iconStyle={{ background: 'var(--primary)', color: '#fff' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Software Development Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Reinsurance Group of America • Remote</h4>
+            <p>
+              Backend engineering, Jenkins, Groovy, Python, Agile, Linux, CI/CD
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="Aug 2025 - Present"
+            iconStyle={{ background: '#e91e63', color: '#fff' }}
+            icon={<SchoolIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Texas A&M University</h3>
+            <h4 className="vertical-timeline-element-subtitle">M.S. Computer Science</h4>
+            <p>Relevant Courses:</p>
+            <ul>
+              <li>Computer and Network Security</li>
+              <li>Cybersecurity Risk</li>
+            </ul>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="May 2025 - Aug 2025"
+            iconStyle={{ background: 'var(--secondary)', color: '#0f0f1a' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Backend Software Engineer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Splunk • Boulder, CO</h4>
+            <p>
+              Distributed Systems, Concurrency & Multithreading, Fault Tolerance, TCP/IP/UDP, IPC, Golang, C++, Testing, CI/CD
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Aug 2024 - Present"
+            iconStyle={{ background: 'var(--primary)', color: '#fff' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Student Researcher</h3>
+            <h4 className="vertical-timeline-element-subtitle">Texas A&M TACO Lab • College Station, TX</h4>
+            <p>
+              Research, Visual Language Models (VLMs), Benchmark Testing & Development
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Jun 2024 - Aug 2024"
+            iconStyle={{ background: 'var(--primary)', color: '#fff' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Software Engineer Intern</h3>
+            <h4 className="vertical-timeline-element-subtitle">Reinsurance Group of America • St. Louis, MO</h4>
+            <p>
+              Fullstack Development, React.js, MUI, AWS Lambda, Terraform, MongoDB, GraphQL, Ansible, Python, Node.js
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Aug 2023 - Sep 2024"
+            iconStyle={{ background: 'var(--primary)', color: '#fff' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Ignite Fellow & Discover Participant</h3>
+            <h4 className="vertical-timeline-element-subtitle">AI4ALL • Remote</h4>
+            <p>
+              Artificial Intelligence, Machine Learning, Python, Tensorflow, sklearn, Matplotlib
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="Aug 2023 - May 2026"
+            iconStyle={{ background: '#e91e63', color: '#fff' }}
+            icon={<SchoolIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Texas A&M University</h3>
+            <h4 className="vertical-timeline-element-subtitle">B.S. Computer Science Honors</h4>
+            <p>Relevant Courses:</p>
+            <ul>
+              <li>Data Structures (C++)</li>
+              <li>Computer Organization (C & Assembly)</li>
+              <li>Programming Languages (Java & Haskell)</li>
+            </ul>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="May 2022 - Aug 2022"
+            iconStyle={{ background: 'var(--primary)', color: '#fff' }}
+            icon={<WorkIcon />}
+            contentStyle={{ background: 'var(--surface)', color: 'var(--text-primary)', boxShadow: 'var(--shadow-lg)', border: '1px solid var(--border)' }}
+            contentArrowStyle={{ borderRight: '7px solid var(--surface)' }}
+          >
+            <h3 className="vertical-timeline-element-title">Lead Researcher</h3>
+            <h4 className="vertical-timeline-element-subtitle">Texas State University • Remote</h4>
+            <p>
+              Research, Cloud Computing, Machine Learning, Java, Python, Orange
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            iconStyle={{ background: 'var(--secondary)', color: '#0f0f1a' }}
+            icon={<StarIcon />}
+          />
+        </VerticalTimeline>
+      </div>
+    </section>
+
+    {/* Projects Section */}
+    <section id="ProjCar" className="projects-section">
+      <div className="container">
+        <h2 className="section-title">
+          Notable <span className="gradient-text">Projects</span>
+        </h2>
+        <a className="projects-link" href="./projects">
+          View All Projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <ProjectCarousel projects={not_proj} />
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer className="footer">
+      <div className="footer__container">
+        <div className="footer__socials">
+          <a href="https://github.com/xxilytoo" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+            <img src={GHlogo} alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/1cken/" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+            <img src={LNlogo} alt="LinkedIn" />
+          </a>
+          <a href="https://x.com/xxilytoo_dev" target="_blank" rel="noopener noreferrer" className="footer__social-link">
+            <img src={Xlogo} alt="X" />
+          </a>
         </div>
+        <p className="footer__text">
+          Built with React • © {new Date().getFullYear()} Shawn
+        </p>
       </div>
     </footer>
-  </section>
+  </main>
   );
 };
 
 export default Home;
-
