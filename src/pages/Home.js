@@ -105,6 +105,18 @@ const Home = () => {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
+          date="May 2025 - Aug 2025"
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          icon={<WorkIcon />}
+        >
+          <h3 className="vertical-timeline-element-title">Backend Software Engineer Intern</h3>
+          <h4 className="vertical-timeline-element-subtitle">Splunk || Boulder, CO</h4>
+          <p>
+            Distributed Systems, Concurrency & Multithreading, Fault Tolerance & Retry Logic, TCP/IP/UDP, Inter-Process Communication (IPC), Golang, C++, Integration/Functional/Unit Testing, Bash, CI/CD
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
           date="Aug 2024 - Present"
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           icon={<WorkIcon />}

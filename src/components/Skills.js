@@ -7,18 +7,18 @@ import js from '../images/javascript.svg';
 import py from '../images/python.svg';
 import mongo from '../images/mongodb-icon.svg';
 import rt from '../images/react-svgrepo-com.svg';
-import node from '../images/node-js-svgrepo-com.svg';
 import aws from '../images/aws-svgrepo-com.svg';
+import golang from '../images/golang-icon.svg';
 
 const skillsData = [
   { name: "JavaScript", image: js },
   { name: "React", image: rt },
   { name: "Python", image: py },
   { name: "C++", image: cpp },
-  { name: "Java", image: javaimg },
+  { name: "Golang", image:  golang},
   { name: "Git", image: git },
   { name: "AWS", image: aws },
-  { name: "Node.js", image: node },
+  { name: "Java", image: javaimg },
   { name: "MongoDB", image: mongo },
 ];
 
