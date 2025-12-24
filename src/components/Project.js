@@ -11,7 +11,7 @@ const parseTech = (techString) => {
   return cleaned.split(',').map(t => t.trim()).filter(t => t.length > 0);
 };
 
-const Project = ({ title, image, description, tech, link, link2, width }) => {
+const Project = ({ title, image, description, tech, link, link2, link3, width }) => {
   const techList = parseTech(tech);
   
   return (
@@ -51,6 +51,16 @@ const Project = ({ title, image, description, tech, link, link2, width }) => {
             rel="noopener noreferrer"
           >
             View Code/Download
+          </a>
+        )}
+        {link3 && (
+          <a
+            className={styles.link}
+            href={link3}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Try Live Demo
           </a>
         )}
       </div>

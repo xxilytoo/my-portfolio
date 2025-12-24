@@ -8,8 +8,26 @@ import ssgame from '../images/SymptomSmashWebScreen.png';
 import cssgame from '../images/carcassonnewebscreenshot.jpg';
 import evamusic from '../images/EvaMusic.png';
 import stemedu from '../images/stemedu.jpg';
+import honeypot from '../images/honeypot.png';
+import scriptkiller from '../images/scriptkiller.png';
 
 const projectList = [
+  {
+    title: 'Kubernetes Honeypot',
+    description: 'A sophisticated cybersecurity honeypot system simulating a vulnerable Navy Personnel Management System. Demonstrates real-world attack vectors including SQL injection, Server-Side Template Injection (SSTI), authentication bypass, container escape techniques, and Kubernetes API exploitation—from initial web compromise to full cluster takeover.',
+    tech: 'Technologies/Libraries Utilized: Python, Flask, PostgreSQL 15, Docker, Kubernetes (K8s), Grafana, Loki',
+    link: 'https://drive.google.com/drive/u/1/folders/1pLagyr4QRnwCdlAD5dRTxB30bxVwPJT5',
+    link2: 'https://github.com/Shassam-Tamu/Capstone-SQL-HoneyPot',
+    link3: 'https://marisol-supergalactic-nonrequisitely.ngrok-free.dev/',
+    image: honeypot
+  },
+  {
+    title: 'Script Killer',
+    description: 'A universal, multi-language security scanning CLI that automatically detects project languages, provisions the appropriate scanners via Nix, and runs parallel static analysis through a single Go-based interface. Integrates seamlessly with pre-commit hooks, CI/CD pipelines, Docker, and MCP tooling to help developers catch vulnerabilities early without complex setup.',
+    tech: 'Technologies/Libraries Utilized: Golang, Bubble Tea, Bash/Shell, Nix, MCP (Model Context Protocol), Parallel Execution',
+    link: 'https://github.com/xxilytoo/Script-Killer-Service-Scanning/tree/main',
+    image: scriptkiller
+  },
   {
     title: 'Cattle Detection Pro',
     description: 'Streamlit-based application utilizing a fine-tuned YOLOv11 model for efficient cattle detection in aerial images and videos. Note: Streamlit might take a while to become up and running from asleep',
@@ -88,6 +106,7 @@ const Projects = () => {
               tech={project.tech}
               link={project.link}
               link2={project.link2}
+              link3={project.link3}
             />
           ))}
         </div>

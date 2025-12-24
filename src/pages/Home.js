@@ -12,12 +12,29 @@ import GHlogo from '../images/github-icon.png';
 import LNlogo from '../images/linkedin-icon.png'
 import Xlogo from '../images/x-icon.png';
 import proj1img from '../images/cattle-proj.png'
-import songpop from '../images/songprediction.png'
 import ccimg from '../images/cc-research.png'
 import evamusic from '../images/EvaMusic.png'
+import honeypot from '../images/honeypot.png'
+import scriptkiller from '../images/scriptkiller.png'
 
 
 const not_proj = [
+  {
+    title: 'Kubernetes Honeypot',
+    description: 'A sophisticated cybersecurity honeypot system simulating a vulnerable Navy Personnel Management System. Demonstrates real-world attack vectors including SQL injection, Server-Side Template Injection (SSTI), authentication bypass, container escape techniques, and Kubernetes API exploitation—from initial web compromise to full cluster takeover.',
+    tech: 'Technologies/Libraries Utilized: Python, Flask, PostgreSQL 15, Docker, Kubernetes (K8s), Grafana, Loki',
+    link: 'https://drive.google.com/drive/u/1/folders/1pLagyr4QRnwCdlAD5dRTxB30bxVwPJT5',
+    link2: 'https://github.com/Shassam-Tamu/Capstone-SQL-HoneyPot',
+    link3: 'https://marisol-supergalactic-nonrequisitely.ngrok-free.dev/',
+    image: honeypot
+  },
+  {
+    title: 'Script Killer',
+    description: 'A universal, multi-language security scanning CLI that automatically detects project languages, provisions the appropriate scanners via Nix, and runs parallel static analysis through a single Go-based interface. Integrates seamlessly with pre-commit hooks, CI/CD pipelines, Docker, and MCP tooling to help developers catch vulnerabilities early without complex setup.',
+    tech: 'Technologies/Libraries Utilized: Golang, Bubble Tea, Bash/Shell, Nix, MCP (Model Context Protocol), Parallel Execution',
+    link: 'https://github.com/xxilytoo/Script-Killer-Service-Scanning/tree/main',
+    image: scriptkiller
+  },
   {
     title: 'Cattle Detection Pro',
     description: 'Streamlit-based application utilizing a fine-tuned YOLOv11 model for efficient cattle detection in aerial images and videos. Note: Streamlit might take a while to become up and running from asleep',
@@ -33,13 +50,6 @@ const not_proj = [
     link: 'https://docs.google.com/presentation/d/1prGpw3YBgJt6wWwnotR1zSXNGd7Ay-wqGUvHwHz0ZE8/edit?usp=sharing',
     link2: 'https://github.com/xxilytoo/IgniteAI-Song-Recommendation-Project',
     image:evamusic
-  },
-  {
-    title: 'Song Popularity Predictor',
-    description: 'Developed a K-Nearest Neighbor GridsearchCV model to predict song popularity based on song intros and pulled data from Spotify API',
-    tech: 'Technologies/Libraries Utilized: Python, sklearn, matplotlib, pandas, numpy, spotipy',
-    link: 'https://github.com/xxilytoo/Song-Prediction/tree/main',
-    image: songpop
   },
   {
     title: 'Cloud Cost Reduction Research',
