@@ -1,0 +1,56 @@
+.toggleButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleButton:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.toggleButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-alpha);
+}
+
+.iconWrapper {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.5) rotate(-180deg);
+}
+
+.icon.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.sunIcon {
+  color: #f59e0b;
+}
+
+.moonIcon {
+  color: #667eea;
+}

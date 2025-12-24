@@ -30,6 +30,7 @@ const ProjectCarousel = ({ projects }) => {
           tech={project.tech}
           link={project.link}
           link2={project.link2}
+          link3={project.link3}
           width="60%"
         />
       </SwiperSlide>

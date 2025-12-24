@@ -1,57 +1,197 @@
+/* ============================================
+   Project Card - Modern Design
+   ============================================ */
+
 .project {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 40px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  transition: all var(--transition-base);
   text-align: left;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition-base);
 }
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-xl), var(--glow-primary);
+}
+
+.project:hover::before {
+  opacity: 1;
 }
 
 .title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
-.description, .tech {
-  color: #161515;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  font-size: 1rem;
+.image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--border);
+  transition: transform var(--transition-slow);
 }
 
-.link {
-  display: inline-block;
-  padding: 8px 12px;
-  color: #61dafb;
-  border: 1px solid #61dafb;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  margin:8px;
+.project:hover .image {
+  transform: scale(1.02);
 }
 
-.link:hover {
-  background-color: #61dafb;
+.description {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.tech {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary);
+  font-weight: var(--font-medium);
+}
+
+.techContainer {
+  margin-bottom: var(--space-5);
+}
+
+.techLabel {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.techBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: var(--primary);
+  background: var(--primary-alpha);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.techBadge:hover {
+  background: var(--primary);
   color: white;
 }
 
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-primary);
+}
+
+.link:first-of-type {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+}
+
+.link:first-of-type:hover {
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+/* For pages that need specific width */
 .pageSpecificWidth {
   width: 60%;
 }
 
-.image{
-  width: 100%; /* Fills the container */
-  max-width: 1000px;
-  height: auto; /* Fixed height for uniform sizing */
-  max-height: 500px;
-  object-fit: cover; /* Crops the image to fit the dimensions */
-  border-radius: 8px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .project {
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+
+  .title {
+    font-size: var(--text-lg);
+  }
+
+  .description {
+    font-size: var(--text-sm);
+  }
+
+  .tech {
+    font-size: var(--text-xs);
+  }
+
+  .linksContainer {
+    flex-direction: column;
+  }
+
+  .link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pageSpecificWidth {
+    width: 100%;
+  }
 }
