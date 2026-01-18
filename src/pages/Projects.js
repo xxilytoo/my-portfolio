@@ -10,6 +10,7 @@ import evamusic from '../images/EvaMusic.png';
 import stemedu from '../images/stemedu.jpg';
 import honeypot from '../images/honeypot.png';
 import scriptkiller from '../images/scriptkiller.png';
+import splunkimg from '../images/splunk.png';
 
 const projectList = [
   {
@@ -27,6 +28,13 @@ const projectList = [
     tech: 'Technologies/Libraries Utilized: Golang, Bubble Tea, Bash/Shell, Nix, MCP (Model Context Protocol), Parallel Execution',
     link: 'https://github.com/xxilytoo/Script-Killer-Service-Scanning/tree/main',
     image: scriptkiller
+  },
+  {
+    title: 'Sidecar Security & Microservices Resillence Engineering',
+    description: 'Developed key components for Splunk’s Go-based Node Architecture, including private endpoint isolation for security, graceful configuration cleanup routines, and a fault-tolerant HTTP client that reduced system restarts by handling transient errors.',
+    tech: 'Technologies/Libraries Utilized: Golang, REST & HTTP, gRPC, TCP/IP, OpenAPI, Test-Driven Development (TDD)',
+    link: 'https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.2/splunk-sidecars/about-splunk-sidecars',
+    image: splunkimg
   },
   {
     title: 'Cattle Detection Pro',
