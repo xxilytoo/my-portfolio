@@ -11,11 +11,11 @@ import StarIcon from "@material-ui/icons/Star";
 import GHlogo from '../images/github-icon.png';
 import LNlogo from '../images/linkedin-icon.png'
 import Xlogo from '../images/x-icon.png';
-import proj1img from '../images/cattle-proj.png'
-import ccimg from '../images/cc-research.png'
-import evamusic from '../images/EvaMusic.png'
-import honeypot from '../images/honeypot.png'
-import scriptkiller from '../images/scriptkiller.png'
+import proj1img from '../images/cattle-proj.png';
+import evamusic from '../images/EvaMusic.png';
+import honeypot from '../images/honeypot.png';
+import scriptkiller from '../images/scriptkiller.png';
+import splunkimg from '../images/splunk.png';
 
 
 const not_proj = [
@@ -36,6 +36,13 @@ const not_proj = [
     image: scriptkiller
   },
   {
+    title: 'Sidecar Security & Microservices Resillence Engineering',
+    description: 'Developed key components for Splunk’s Go-based Node Architecture, including private endpoint isolation for security, graceful configuration cleanup routines, and a fault-tolerant HTTP client that reduced system restarts by handling transient errors.',
+    tech: 'Technologies/Libraries Utilized: Golang, REST & HTTP, gRPC, TCP/IP, OpenAPI, Test-Driven Development (TDD)',
+    link: 'https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.2/splunk-sidecars/about-splunk-sidecars',
+    image: splunkimg
+  },
+  {
     title: 'Cattle Detection Pro',
     description: 'Streamlit-based application utilizing a fine-tuned YOLOv11 model for efficient cattle detection in aerial images and videos. Note: Streamlit might take a while to become up and running from asleep',
     tech: 'Technologies/Libraries Utilized: Python, Ultralytics, Roboflow, Streamlit, Sort, cv2.',
@@ -50,14 +57,6 @@ const not_proj = [
     link: 'https://docs.google.com/presentation/d/1prGpw3YBgJt6wWwnotR1zSXNGd7Ay-wqGUvHwHz0ZE8/edit?usp=sharing',
     link2: 'https://github.com/xxilytoo/IgniteAI-Song-Recommendation-Project',
     image:evamusic
-  },
-  {
-    title: 'Cloud Cost Reduction Research',
-    description: 'Developed and implemented a groundbreaking Waterfall Algorithm using machine learning models on Microsoft Azure Virtual Machine data, projected to save $15 million across 66,721 virtual machines, with findings published in the Journal of Student Research.',
-    tech: 'Technologies/Libraries Utilized: Java, Python, Orange',
-    link: 'https://www.jsr.org/hs/index.php/path/article/view/3362',
-    link2: 'https://github.com/xxilytoo/CloudComputingCostReduction',
-    image: ccimg
   },
 ]
 
