@@ -11,6 +11,7 @@ import stemedu from '../images/stemedu.jpg';
 import honeypot from '../images/honeypot.png';
 import scriptkiller from '../images/scriptkiller.png';
 import splunkimg from '../images/splunk.png';
+import pearlprodigy from '../images/pearlprodigy.png';
 
 const projectList = [
   {
@@ -43,6 +44,13 @@ const projectList = [
     link: 'https://cattledetectionpro.streamlit.app/',
     link2: 'https://github.com/xxilytoo/cattle_graze_model',
     image: proj1img
+  },
+  {
+    title: 'Pearl Prodigy',
+    description: 'A customer interface web application with manager, employee, and customer functionality for ShareTea. Features include order placement, menu browsing, and Gemini-powered chatbot for customer support.',
+    tech: 'Technologies/Libraries Utilized: React, TypeScript, Javascript, Gemini API',
+    link: 'https://drive.google.com/file/d/1OrP39B6MMmktSuuLhUK2L-vRD9FsBH0A/view?usp=sharing',
+    image: pearlprodigy
   },
   {
     title: 'EvaLaMusica',
